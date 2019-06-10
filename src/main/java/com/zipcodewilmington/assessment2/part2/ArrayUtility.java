@@ -2,10 +2,7 @@ package com.zipcodewilmington.assessment2.part2;
 
 import org.omg.CORBA.INTERNAL;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 import java.util.concurrent.ArrayBlockingQueue;
 
 public class ArrayUtility {
@@ -45,6 +42,7 @@ public class ArrayUtility {
 
     public Integer mostCommon(Integer[] array) {
         // try hashmap wizardry if time
+        /*
         ArrayList<Integer> keys = new ArrayList<>();
         ArrayList<Integer> values = new ArrayList<>();
 
@@ -65,6 +63,20 @@ public class ArrayUtility {
             if(values.get(i) > largestValue){
                 largestKey = keys.get(i);
                 largestValue = values.get(i);
+            }
+        }
+        return largestKey; */
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for(Integer integer : array){
+            map.merge(integer, 1, (v1, v2) -> v1 + v2);
+        }
+        Integer largestKey = Integer.MAX_VALUE;
+        Integer largestValue = -1;
+        for(Map.Entry<Integer, Integer> entry : map.entrySet()){
+            if(entry.getValue() > largestValue){
+                largestKey = entry.getKey();
+                largestValue = entry.getValue();
             }
         }
         return largestKey;
