@@ -17,6 +17,7 @@ public class Router {
 
     public void add(String path, String controller) {
         // should use that merge wizardry. handle it later
+        // can't use merge wizardry because of behavior of ToStringTest
         keys.add(path);
         values.add(controller);
     }

@@ -14,15 +14,19 @@ public class ArrayUtility {
 
     public Integer[] rotate(Integer[] array, Integer index) {
         // not a good way. come back if time
-        Queue<Integer> quoQue = new ArrayBlockingQueue<Integer>(array.length);
+        // maybe it is a good way? Queue does exactly what I need
+        /*
+        Queue<Integer> quoque = new ArrayBlockingQueue<>(array.length);
         for(Integer integer : array){
-            quoQue.add(integer);
+            quoque.add(integer);
         }
+        */
+        Queue<Integer> quoque = new LinkedList<Integer>(Arrays.asList(array));
         for(int i = 0; i < index; i++){
-            Integer temp = quoQue.poll();
-            quoQue.add(temp);
+            Integer temp = quoque.poll();
+            quoque.add(temp);
         }
-        return quoQue.toArray(new Integer[quoQue.size()]);
+        return quoque.toArray(new Integer[quoque.size()]);
     }
 
     public Integer countOccurrence(Integer[] array1, Integer[] array2, Integer valueToEvaluate) {
