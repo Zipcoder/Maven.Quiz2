@@ -1,8 +1,6 @@
 package com.zipcodewilmington.assessment2.part2;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.TreeSet;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class ListUtility {
@@ -39,11 +37,22 @@ public class ListUtility {
     }
 
         public Integer mostCommon () {
-        ArrayUtility arrayUtility = new ArrayUtility();
-        Integer[] listAsArray = new Integer[list.size()];
-        listAsArray = list.toArray(listAsArray);
-            return arrayUtility.mostCommon(listAsArray);
+            int count = 0;
+            int mostCommon = list.get(0);
+            int temp = 0;
+            int tempCount = 0;
+            for(int i = 0; i <= list.size() - 1;i++){
+                temp = list.get(i);
+                tempCount = Collections.frequency(Collections.singletonList(list), temp);
+            }
+            if(tempCount > count){
+                mostCommon = temp;
+                count = tempCount;
+                tempCount = 0;
+            }
+            return mostCommon;
         }
+
 
         public Boolean contains (Integer valueToAdd){
             for(int i = 0; i < list.size(); i++){
