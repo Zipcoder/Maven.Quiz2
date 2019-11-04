@@ -3,6 +3,11 @@ package com.zipcodewilmington.assessment2.part2;
 import java.util.List;
 
 public class ListUtility {
+    private List<Integer> =
+
+    public ListUtility() {
+        this.
+    }
     public Boolean add(int i) {
         return null;
     }
