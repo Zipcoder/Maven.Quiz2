@@ -19,8 +19,8 @@ public class ArrayUtility {
     public Integer[] rotate(Integer[] array, Integer index) {
         Integer[]rotatedArray = new Integer[array.length];
         for (int i = 0; i < array.length; i++) {
-            if ((i+index)>array.length-1){
-                rotatedArray[i]=array[i-(array.length-index)];
+            if ((i+index)>(array.length-1)){
+                rotatedArray[i]=array[(i-array.length)+index];
             }
             rotatedArray[i]=array[i+index];
 

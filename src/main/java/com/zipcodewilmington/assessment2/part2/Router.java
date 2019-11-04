@@ -8,13 +8,9 @@ import java.util.Set;
 public class Router {
     String path;
     String controller;
-    Map<String ,String> map;
-
-    public Router(){
-        Map<String, String> map = new HashMap<>();
+    Map<String ,String> map =new HashMap<>();
 
 
-    }
 
     public void add(String path, String controller) {
         map.put(path, controller);
