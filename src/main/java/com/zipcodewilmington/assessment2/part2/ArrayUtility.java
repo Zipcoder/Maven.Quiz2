@@ -18,15 +18,15 @@ public class ArrayUtility {
 
     public Integer[] rotate(Integer[] array, Integer index) {
         Integer[]rotatedArray = new Integer[array.length];
-        for (int i = 0; i < array.length; i++) {
-            if ((i+index)>(array.length-1)){
-                rotatedArray[i]=array[(i-array.length)+index];
-            }
-            rotatedArray[i]=array[i+index];
+        for (int i = 0; i < array.length-index; i++) {
+            rotatedArray[i]= array[i+index];}
+        for (int i = array.length-index; i < array.length; i++) {
+            rotatedArray[i]=array[i-array.length+index];
 
         }
         return rotatedArray;
     }
+
 
     public Integer countOccurrence(Integer[] array1, Integer[] array2, Integer valueToEvaluate) {
         Integer count = 0;

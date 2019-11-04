@@ -8,8 +8,7 @@ import java.util.Set;
 public class Router {
     String path;
     String controller;
-    Map<String ,String> map =new HashMap<>();
-
+    Map<String, String> map = new HashMap<>();
 
 
     public void add(String path, String controller) {
@@ -30,5 +29,14 @@ public class Router {
 
     public void remove(String path) {
         map.remove(path);
+    }
+
+    public String toString() {
+        String mapString = "";
+        for (String k : map.keySet()) {
+            mapString += k + map.keySet() +"\n";
+        }
+        return mapString;
+
     }
 }
