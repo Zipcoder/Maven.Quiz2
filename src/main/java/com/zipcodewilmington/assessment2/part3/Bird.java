@@ -1,8 +1,8 @@
 package com.zipcodewilmington.assessment2.part3;
 
-public class Bird {
+public class Bird implements Animal {
     public String move() {
-        return null;
+        return "fly";
     }
 
     public void setMigrationMonth(String expected) {
@@ -11,5 +11,16 @@ public class Bird {
 
     public String getMigrationMonth() {
         return null;
+    }
+
+    @Override
+    public int getSpeed(){
+
+
+        return 0;
+    }
+
+    public String color() {
+        return "";
     }
 }
