@@ -15,12 +15,29 @@ public class Router {
     }
 
     public String getController(String path) {
-        return null;
+        return map.get(path);
     }
 
     public void update(String path, String studentController) {
+        if(path.equals("/users")){
+            map.replace(path, studentController, "UserController");
+        } else if (path.equals("/employees")){
+            map.replace(path, studentController, "EmployeeController");
+        } else if (path.equals("/students")) {
+            map.replace(path, studentController, "StudentController");
+        }
     }
 
     public void remove(String path) {
+        map.remove(path);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for(String name : map.keySet()){
+            sb.append(map.get(name) + name + "\n");
+        }
+        return sb.toString().trim();
     }
 }
