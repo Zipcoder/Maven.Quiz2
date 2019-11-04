@@ -1,6 +1,7 @@
 package com.zipcodewilmington.assessment2.part2;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class Router {
 
@@ -28,6 +29,19 @@ public class Router {
     public void remove(String path) {
 
         newMap.remove(path);
+    }
+
+    public String toString(){
+
+        String result = "";
+
+        for (Map.Entry<String, String> entry :newMap.entrySet()) {
+
+            result += entry.getKey() + entry.getValue() + "\n";
+        }
+
+            return result;
+
     }
 
 }
