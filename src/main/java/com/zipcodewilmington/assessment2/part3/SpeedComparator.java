@@ -10,7 +10,7 @@ public class SpeedComparator implements Comparator<Animal>{
         if(o1.getSpeed() == o2.getSpeed())
             return 0;
 
-        else if(o1.getSpeed() < o2.getSpeed())
+        else if(o1.getSpeed() > o2.getSpeed())
             return -1;
 
         else
