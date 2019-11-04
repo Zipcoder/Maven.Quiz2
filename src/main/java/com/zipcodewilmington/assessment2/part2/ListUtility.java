@@ -15,7 +15,7 @@ public class ListUtility {
     }
 
     public List<Integer> getUnique() {
-        return null;
+        return new ArrayList<>(new LinkedHashSet<>(list));
     }
 
     public String join() {
@@ -37,3 +37,7 @@ public class ListUtility {
         return list.contains(valueToAdd);
     }
 }
+
+
+
+
