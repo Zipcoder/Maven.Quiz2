@@ -21,21 +21,18 @@ for(int j=0 ;j<l2;j++){
     }
 
     public Integer[] rotate(Integer[] array, Integer index) {
-    int counter=0;
-    int i=1;
 
-    Integer[]rotated=new Integer[array.length];
-    while(counter<index){
-
-        rotated[array.length-1]=array[0];
-        rotated[i-1]=array[i];
-        counter++;
-
-    }
+        Integer[]rotated=new Integer[array.length];
 
 
 
 
+
+
+
+
+
+System.out.println(rotated);
         return rotated;
     }
 

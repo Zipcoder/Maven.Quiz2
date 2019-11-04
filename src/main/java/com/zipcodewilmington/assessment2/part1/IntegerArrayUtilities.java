@@ -18,18 +18,12 @@ public class IntegerArrayUtilities {
          c=c+1;
        }
        int l=c;
-       System.out.println(l);
+       //System.out.println(l);
        Integer arr[]=new Integer[l];
-       int j=start,i=0;
-       while(arr.length<l){
-         arr[i]=j;
-         j++;
+
+       for(int i = 0 ; i < arr.length ;i++){
+           arr[i]=start+i;
        }
-
-
-
-
-
        return arr;
 
     }
