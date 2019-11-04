@@ -8,7 +8,9 @@ public class ListUtility {
     }
 
     public Integer size() {
-        return null;
+        Integer counter = 0;
+
+        return counter;
     }
 
     public List<Integer> getUnique() {
