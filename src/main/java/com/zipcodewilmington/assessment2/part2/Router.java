@@ -1,11 +1,17 @@
 package com.zipcodewilmington.assessment2.part2;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Router {
+    HashMap<String, String> map = new HashMap<String,String>();
+
     public void add(String path, String controller) {
+        map.put(controller,path);
     }
 
     public Integer size() {
-        return null;
+        return map.size();
     }
 
     public String getController(String path) {
