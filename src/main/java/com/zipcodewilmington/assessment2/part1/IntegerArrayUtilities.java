@@ -1,13 +1,19 @@
 package com.zipcodewilmington.assessment2.part1;
 
+import java.util.Arrays;
+
 public class IntegerArrayUtilities {
     public Boolean hasEvenLength(Integer[] array) {
         return (array.length % 2 == 0);
     }
 
     public Integer[] range(int start, int stop) {
-
-        return new Integer[stop + start + 1];
+        Integer[] intArray = new Integer[stop - start + 1];
+        for(int i = start; i <= stop; i++){
+            intArray[i] = i;
+            System.out.println(Arrays.toString(intArray));
+        }
+        return intArray;
     }
 
     public Integer getSumOfFirstTwo(Integer[] array) {
