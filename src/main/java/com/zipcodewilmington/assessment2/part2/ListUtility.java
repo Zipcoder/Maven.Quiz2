@@ -35,7 +35,16 @@ public class ListUtility {
     }
 
     public String join() {
-        return null;
+        String joinedString = "";
+
+        for (int i = 0; i < result.size(); i++){
+            if (result.size() > 1 && i != result.size() - 1){
+                joinedString += result.get(i) + ", ";
+            } else {
+                joinedString += result.get(i);
+            }
+        }
+        return joinedString;
     }
 
     public Integer mostCommon() {
