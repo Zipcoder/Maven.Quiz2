@@ -14,6 +14,11 @@ public class IntegerArrayUtilities {
     }
 
     public Integer getProductOfFirstTwo(Integer[] array) {
-        return null;
+        int lastNumber = 0;
+        int secondToLastNumber = 0;
+
+        lastNumber = array[array.length - 1];
+        secondToLastNumber = array[array.length - 2];
+        return lastNumber * secondToLastNumber;
     }
 }
