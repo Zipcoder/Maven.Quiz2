@@ -15,7 +15,7 @@ public class ListUtility {
     }
 
     public Integer size() {
-        return null;
+        return result.size();
     }
 
     public List<Integer> getUnique() {
