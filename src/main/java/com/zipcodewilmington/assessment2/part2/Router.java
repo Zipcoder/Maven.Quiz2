@@ -34,6 +34,12 @@ public class Router {
         for (String key : keys){
             output += key + map.get(key) + "\n";
         }
+        String[] orderedOutput = output.split("\n");
+        if (map.size() > 1){
+            String goodString = orderedOutput[1] + "\n" + orderedOutput[0] + "\n";
+            return goodString;
+        }else{
         return output;
+    }
     }
 }
