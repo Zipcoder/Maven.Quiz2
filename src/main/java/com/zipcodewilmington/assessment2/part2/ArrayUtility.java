@@ -24,10 +24,24 @@ public class ArrayUtility {
     }
 
     public Integer countOccurrence(Integer[] array1, Integer[] array2, Integer valueToEvaluate) {
-        return null;
+        Integer count = 0;
+        Integer[] array = merge(array1, array2);
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == valueToEvaluate) count += 1;
+        }
+        return count;
     }
 
     public Integer mostCommon(Integer[] array) {
-        return null;
+        Integer commonValue = 0;
+        Integer maxCount = 0;
+        for (Integer value : array) {
+            Integer occurrences = countOccurrence(array, new Integer[0], value);
+            if (occurrences > maxCount) {
+                maxCount = occurrences;
+                commonValue = value;
+            }
+        }
+        return commonValue;
     }
 }
