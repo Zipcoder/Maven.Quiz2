@@ -29,4 +29,12 @@ public class Router {
     public void remove(String path) {
         this.map.remove(path);
     }
+
+    public String toString() {
+        StringBuilder result = new StringBuilder();
+        for (String key : this.map.keySet()) {
+            result.append(key).append(this.map.get(key)).append('\n');
+        }
+        return result.toString();
+    }
 }
