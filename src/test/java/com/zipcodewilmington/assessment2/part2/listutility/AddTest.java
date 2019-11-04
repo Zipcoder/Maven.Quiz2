@@ -8,6 +8,7 @@ public class AddTest {
     @Test
     public void test1() {
         test(1);
+
     }
 
     @Test
