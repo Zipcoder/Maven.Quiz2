@@ -1,17 +1,29 @@
 package com.zipcodewilmington.assessment2.part2;
 
-import java.util.List;
+import com.j256.ormlite.stmt.query.In;
 
-public class ListUtility {
+import java.util.*;
+
+public class ListUtility{
+    public ArrayList<Integer> myArray = new ArrayList<>();
+    //private ListUtility myTest = new ListUtility();
+
+
     public Boolean add(int i) {
-        return null;
+        ArrayList<Integer> myArray = new ArrayList<>();
+        myArray.add(i);
+        return myArray.contains(i);
     }
 
     public Integer size() {
-        return null;
+
+        //return Collection.size();
+        return 0;
     }
 
     public List<Integer> getUnique() {
+
+
         return null;
     }
 
