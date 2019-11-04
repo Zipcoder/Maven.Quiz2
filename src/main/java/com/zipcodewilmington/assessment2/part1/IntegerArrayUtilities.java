@@ -17,10 +17,19 @@ public class IntegerArrayUtilities {
     }
 
     public Integer getSumOfFirstTwo(Integer[] array) {
-        return null;
+        Integer sum = 0;
+        if (array.length >= 2) {
+            sum = array[0] + array[1];
+        }
+        return sum;
     }
 
     public Integer getProductOfFirstTwo(Integer[] array) {
-        return null;
+        // getProductOfLastTwo
+        Integer product = 1;
+        if (array.length >= 2) {
+            product = array[array.length-1] * array[array.length-2];
+        }
+        return product;
     }
 }
