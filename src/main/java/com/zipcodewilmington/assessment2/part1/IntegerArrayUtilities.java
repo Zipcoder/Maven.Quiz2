@@ -7,7 +7,13 @@ public class IntegerArrayUtilities {
     }
 
     public Integer[] range(int start, int stop) {
-        return null;
+        Integer [] result = new Integer[Math.abs(stop - start) + 1];
+
+        for (int i = 0; i <= result.length - 1; i++ ){
+            result[i] = start;
+            start ++;
+        }
+        return result;
     }
 
     public Integer getSumOfFirstTwo(Integer[] array) {
