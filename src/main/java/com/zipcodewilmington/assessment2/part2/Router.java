@@ -2,6 +2,7 @@ package com.zipcodewilmington.assessment2.part2;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeSet;
 
 public class Router {
     HashMap<String, String> map = new HashMap<String,String>();
@@ -36,7 +37,7 @@ public class Router {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         for(String name : map.keySet()){
-            sb.append(map.get(name) + name + "\n");
+            sb.append(map.get(name)).append(name).append("\n");
         }
         return sb.toString().trim();
     }
