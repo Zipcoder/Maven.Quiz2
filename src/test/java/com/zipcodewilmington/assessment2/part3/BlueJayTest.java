@@ -18,7 +18,7 @@ public class BlueJayTest {
     @Test
     public void testColor() {
         Animal blueJay = (Animal)(Object)new BlueJay();
-        String expected = "blue";
+        String expected = "Blue";
 
         String actual = blueJay.color();
 
