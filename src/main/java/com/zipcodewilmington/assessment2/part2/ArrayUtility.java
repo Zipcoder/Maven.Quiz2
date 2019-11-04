@@ -32,9 +32,11 @@ public class ArrayUtility {
             indexToRotate[counter] = array[i];
             counter++;
         }
+       Integer secondCounter = 0;
         for (int i = counter; i < indexToRotate.length; i++){
-            indexToRotate[i] = array[index - 1];
+            indexToRotate[i] = array[secondCounter];
             counter++;
+            secondCounter++;
         }
         return indexToRotate;
     }
