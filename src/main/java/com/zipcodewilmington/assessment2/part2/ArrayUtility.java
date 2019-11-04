@@ -54,8 +54,11 @@ public class ArrayUtility {
         for(int i = 0; i < array.length; i++) {
             counter = (countOccurrence(array, array, array[i])) / 2;
 
-            if(temp < counter)
+            if(temp < counter) {
                 mostCommon = array[i];
+                temp = counter;
+            }
+
         }
         return mostCommon;
     }
