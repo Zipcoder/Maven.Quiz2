@@ -9,8 +9,8 @@ public class ListUtility {
     List<Integer>list = new ArrayList<>();
 
 
-    public Boolean add(Integer i) {
-        return list.add(i);
+    public Boolean add(Integer e) {
+        return list.add(e);
 
     }
 
@@ -58,6 +58,6 @@ public class ListUtility {
 
 
     public Boolean contains(Integer valueToAdd) {
-        return null;
+        return list.contains(valueToAdd);
     }
 }
