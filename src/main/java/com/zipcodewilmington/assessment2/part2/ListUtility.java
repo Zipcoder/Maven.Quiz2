@@ -1,6 +1,7 @@
 package com.zipcodewilmington.assessment2.part2;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ListUtility {
@@ -11,13 +12,19 @@ public class ListUtility {
     }
 
     public Boolean add(int i) {
+        Integer[] arr = new Integer[list.size()+1];
+        for (int iter = 0; iter < list.size(); iter++) {
+            arr[iter] = list.get(iter);
+        }
+        arr[arr.length-1] = i;
 //        try {
 //            return list.add(i);
 //        } catch (Exception e) {
 //            list.add(null);
 //            return true;
 //        }
-        return list.add(i);
+        list = new ArrayList<Integer>(Arrays.asList(arr));
+        return true;
     }
 
     public Integer size() {
