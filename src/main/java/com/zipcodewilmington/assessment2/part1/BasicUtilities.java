@@ -23,11 +23,12 @@ public class BasicUtilities {
     }
 
     public Boolean startsWith(String string, Character character) {
-        if(string.contains(Character.valueOf(character).toString())){
+        String c =Character.toString(character);
+        if(string.startsWith(c)){
             return true;
         }
-        else if(!(Character.isLowerCase(character))) {
-            return true;
+        else if (string.startsWith(c)){
+            return false;
         }
         return false;
     }

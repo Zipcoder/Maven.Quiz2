@@ -3,8 +3,9 @@ import java.util.ArrayList;
 
 import java.util.List;
 
+
 public class ListUtility {
-    List list = new ArrayList();
+    ArrayList<Integer> list = new ArrayList<Integer>();
     public Boolean add(int i) {
         return list.add(i);
 
@@ -19,7 +20,15 @@ public class ListUtility {
     }
 
     public String join() {
-        return null;
+        StringBuilder builder = new StringBuilder();
+        // Append all Integers in StringBuilder to the StringBuilder.
+        for (int number : list) {
+            builder.append(number);
+            builder.append(",");
+        }
+        // Remove last delimiter with setLength.
+        builder.setLength(builder.length() - 1);
+        return builder.toString();
     }
 
     public Integer mostCommon() {
@@ -27,6 +36,6 @@ public class ListUtility {
     }
 
     public Boolean contains(Integer valueToAdd) {
-        return null;
+        return list.contains(valueToAdd);
     }
 }
