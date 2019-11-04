@@ -18,7 +18,7 @@ public class RedRobin  extends Bird implements Animal{
     }
 
     public int getSpeed(){
-        return 0;
+        return 10;
     }
     public String color(){
         return "red";

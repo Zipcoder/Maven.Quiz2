@@ -7,11 +7,8 @@ public class ListUtility {
     List<Integer> result = new ArrayList<Integer>();
 
     public Boolean add(int i) {
-        boolean yesorno = false;
-
         result.add(i);
-        yesorno = result.contains(i);
-        return yesorno;
+        return result.contains(i);
     }
 
     public Integer size() {
@@ -59,6 +56,6 @@ public class ListUtility {
     }
 
     public Boolean contains(Integer valueToAdd) {
-        return null;
+        return result.contains(valueToAdd);
     }
 }

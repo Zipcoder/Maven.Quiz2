@@ -5,7 +5,7 @@ public class Horse implements Animal{
         return "gallop";
     }
     public int getSpeed() {
-        return 0;
+        return 40;
     }
     public String color(){
         return "brown";

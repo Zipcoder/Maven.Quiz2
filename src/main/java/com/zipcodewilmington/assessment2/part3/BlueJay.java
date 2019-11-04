@@ -5,7 +5,7 @@ public class BlueJay extends Bird implements Animal{
         return "fly";
     }
     public  int getSpeed(){
-        return 0;
+        return 13;
     }
 
     public String color(){
