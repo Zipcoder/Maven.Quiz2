@@ -41,6 +41,25 @@ public class ArrayUtility {
     }
 
     public Integer mostCommon(Integer[] array) {
-        return null;
+        Arrays.sort(array);
+        int previous = array[0];
+        int popular = array[0];
+        int counter = 1;
+        int maxCount = 1;
+
+        for (int i = 1; i < array.length; i++){
+            if (array[i] == previous) {
+                counter++;
+            } else {
+                if (counter > maxCount) {
+                    popular = array[i-1];
+                    maxCount = counter;
+                }
+                previous = array[i];
+                counter = 1;
+            }
+        }
+
+        return counter > maxCount ? array[array.length -1] : popular;
     }
 }
