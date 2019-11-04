@@ -5,14 +5,29 @@ import com.j256.ormlite.stmt.query.In;
 import java.util.*;
 
 public class ListUtility{
-    public ArrayList<Integer> myArray = new ArrayList<>();
-    //private ListUtility myTest = new ListUtility();
+    public ArrayList<Integer> myArray = new ArrayList<Integer>(){
+        {
+            add(1);
+            add(2);
+            add(3);
+            add(null);
+        }
+    };
+    //public ListUtility myUtil = new ListUtility();
 
 
     public Boolean add(int i) {
-        ArrayList<Integer> myArray = new ArrayList<>();
-        myArray.add(i);
+        //ArrayList<Integer> myArray = new ArrayList<>();
+//        return myArray.add(i);
+//        System.out.println(myArray.toString());
+
+
+        myArray.add(null);
+        myArray.add(3);
+        myArray.add(2);
+        myArray.add(1);
         return myArray.contains(i);
+
     }
 
     public Integer size() {
