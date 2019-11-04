@@ -32,7 +32,7 @@ public class GetProductOfLastTwoTest {
         IntegerArrayUtilities utilities = new IntegerArrayUtilities();
 
         // when
-        Integer actualSum = utilities.getProductOfFirstTwo(array);
+        Integer actualSum = utilities.getProductOfLastTwo(array);
 
         // then
         Assert.assertEquals(expectedSum, actualSum);
