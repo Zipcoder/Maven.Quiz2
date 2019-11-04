@@ -1,18 +1,20 @@
 package com.zipcodewilmington.assessment2.part2;
 
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class Router {
     private Map<String, String> routerMap;
 
-    public Router(Map<String, String> routerMap)
+   /* public Router(Map<String, String> routerMap)
     {
         this.routerMap = routerMap;
-    }
+    }*/
 
     public Router() {
         this.routerMap = new LinkedHashMap<String, String>();
+       // this.routerMap = new HashMap<>();
     }
 
     public void add(String path, String controller)

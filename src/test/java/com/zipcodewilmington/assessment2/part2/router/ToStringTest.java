@@ -52,6 +52,7 @@ public class ToStringTest {
 
         // when
         String actualString = router.toString();
+        System.out.println(actualString);
 
 
         // then
