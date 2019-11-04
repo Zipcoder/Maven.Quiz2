@@ -5,6 +5,8 @@ import java.util.TreeMap;
 
 public class Router {
 
+    private String toString = "";
+
     Map<String, String> newMap = new TreeMap<String, String>();
 
     public void add(String path, String controller) {
