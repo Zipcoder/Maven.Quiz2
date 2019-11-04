@@ -11,22 +11,9 @@ import  com.zipcodewilmington.assessment2.part2.ArrayUtility;
 public class ListUtility {
     ArrayList<Integer> al = new ArrayList<Integer>();
 
-    public ListUtility() //constructor
-    {
-
-    }
 
     public Boolean add(int i) {
-        if (isNull(i))
-        {
-            al.add(null);
-        return true;
-        }
-        else {
-            if (al.add(i)) return true;
-            else return false;
-        }
-
+            if (al.add(i)) return true; else return false;
     }
 
     public Integer size() {
@@ -47,9 +34,10 @@ public class ListUtility {
 
     public String join() {
         StringBuilder output = new StringBuilder();
-        for (Integer value: al) {
-            output.append(value);
-            if (value != al.get(al.size()-1)) {
+
+        for (int i=0; i< al.size(); i++) {
+            output.append(al.get(i));
+            if (i != al.size()-1) {
                 output.append(", ");
             }
         }
