@@ -33,14 +33,11 @@ public class Router {
 
     public String toString() {
         StringBuilder result = new StringBuilder();
-        if (this.map.size() < 3) {
-            for (String key : this.map.keySet()) {
-                result.append(key).append(this.map.get(key)).append('\n');
-            }
-        } else {
-            for (String key : this.map.keySet()) {
-                result.append(key).append(this.map.get(key)).append('\n');
-            }
+
+        for (String key : this.map.keySet()) {
+            result.append(key).append(this.map.get(key)).append('\n');
+        }
+        if (this.map.size() > 2) {
             result.append("/students").append(this.map.get("/students")).append('\n');
         }
 
