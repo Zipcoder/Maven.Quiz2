@@ -7,7 +7,8 @@ public class BasicUtilities {
     }
 
     public Boolean isLessThan7(Integer value) {
-        return null;
+
+        return (value <= 7) ? true : false;
     }
 
     public Boolean isBetween5And7(Integer valueToEvaluate) {
