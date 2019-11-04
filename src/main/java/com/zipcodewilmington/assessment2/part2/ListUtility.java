@@ -1,7 +1,7 @@
 package com.zipcodewilmington.assessment2.part2;
 
 import java.util.ArrayList;
-import java.util.HashSet;
+
 import java.util.List;
 
 public class ListUtility {
@@ -17,7 +17,7 @@ public class ListUtility {
         }
 
         public List<Integer> getUnique() {
-            return new ArrayList<>(new HashSet<>(listNow));
+            return null;
         }
 
         public String join() {
