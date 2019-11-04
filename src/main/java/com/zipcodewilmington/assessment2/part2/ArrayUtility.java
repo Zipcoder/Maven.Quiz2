@@ -24,7 +24,21 @@ public class ArrayUtility {
     }
 
     public Integer[] rotate(Integer[] array, Integer index) {
-        return null;
+        Integer [] result = new Integer[array.length];
+        Integer [] array1 = new Integer[array.length - index];
+        Integer [] array2 = new Integer[index];
+
+        for (int i = 0; i < array2.length; i++){
+            array2[i] = array[i];
+        }
+
+        for (int i = 0; i < array1.length; i++){
+            array1[i] = array[index];
+            index++;
+        }
+
+        result = merge(array1,array2);
+        return result;
     }
 
     public Integer countOccurrence(Integer[] array1, Integer[] array2, Integer valueToEvaluate) {
@@ -62,4 +76,5 @@ public class ArrayUtility {
 
         return counter > maxCount ? array[array.length -1] : popular;
     }
+
 }
