@@ -37,7 +37,7 @@ public class Router {
 
         for (Map.Entry<String, String> entry :newMap.entrySet()) {
 
-            result += entry.getKey() + entry.getValue() + "\n";
+            result = entry.getKey() + entry.getValue() + "\n" + result;
         }
 
             return result;
