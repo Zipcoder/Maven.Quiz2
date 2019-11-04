@@ -19,5 +19,6 @@ public class Router {
     }
 
     public void remove(String path) {
+        result = null;
     }
 }
