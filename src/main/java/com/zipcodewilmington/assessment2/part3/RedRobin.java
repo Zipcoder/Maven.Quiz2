@@ -8,4 +8,9 @@ public class RedRobin extends Bird{
     public String getMigrationMonth() {
         return "August";
     }
+
+    @Override
+    public int getSpeed() {
+        return 10;
+    }
 }
