@@ -9,8 +9,9 @@ public class IntegerArrayUtilities {
 
     public Integer[] range(int start, int stop) {
         Integer[] intArray = new Integer[stop - start + 1];
-        for(int i = start; i <= stop; i++){
-            intArray[i] = i;
+        for(int i = 0; i < intArray.length; i++){
+            intArray[i] = start;
+            start++;
             System.out.println(Arrays.toString(intArray));
         }
         return intArray;
