@@ -26,13 +26,27 @@ public class GetProductOfLastTwoTest {
         test(array, expectedSum);
     }
 
+//Something tells me this is wrong. Why would it be called product of LASTTWO but call the productofFIRSTTWO method?
+//I commented out the bad one and made a proper one.
+   /* private void test(Integer[] array, Integer expectedSum) {
+        // given
+        IntegerArrayUtilities utilities = new IntegerArrayUtilities();
+
+        // when
+        Integer actualSum = utilities.getProductOfFirstTwo(array);
+
+        // then
+        Assert.assertEquals(expectedSum, actualSum);
+    }
+
+    */
 
     private void test(Integer[] array, Integer expectedSum) {
         // given
         IntegerArrayUtilities utilities = new IntegerArrayUtilities();
 
         // when
-        Integer actualSum = utilities.getProductOfFirstTwo(array);
+        Integer actualSum = utilities.getProductOfLastTwo(array);
 
         // then
         Assert.assertEquals(expectedSum, actualSum);
