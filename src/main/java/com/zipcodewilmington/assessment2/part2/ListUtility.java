@@ -10,7 +10,7 @@ public class ListUtility{
             add(1);
             add(2);
             add(3);
-            add(null);
+            //add(null);
         }
     };
     //public ListUtility myUtil = new ListUtility();
@@ -21,11 +21,6 @@ public class ListUtility{
 //        return myArray.add(i);
 //        System.out.println(myArray.toString());
 
-
-        myArray.add(null);
-        myArray.add(3);
-        myArray.add(2);
-        myArray.add(1);
         return myArray.contains(i);
 
     }

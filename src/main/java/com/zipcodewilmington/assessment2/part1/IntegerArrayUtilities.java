@@ -12,12 +12,14 @@ public class IntegerArrayUtilities {
     }
 
     public Integer[] range(int start, int stop) {
+
+
+
         int arrayLength = (stop - start) + 1;
             if ( arrayLength < 0){
                 arrayLength = arrayLength * (-1);
                 arrayLength += 1;
             }
-        System.out.println(arrayLength);
         Integer[] theRange = new Integer [arrayLength];
         //ArrayList<Integer> myRange = new ArrayList<>();
 

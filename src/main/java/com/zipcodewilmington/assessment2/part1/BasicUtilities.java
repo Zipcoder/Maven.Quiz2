@@ -4,7 +4,7 @@ import java.util.regex.Pattern;
 
 public class BasicUtilities {
     public Boolean isGreaterThan5(Integer value) {
-        if (value > 5) {
+        if (value >= 5) {
             return true;
         } else {
             return false;
@@ -12,7 +12,7 @@ public class BasicUtilities {
     }
 
     public Boolean isLessThan7(Integer value) {
-        if (value < 7) {
+        if (value <= 7) {
             return true;
         } else {
             return false;

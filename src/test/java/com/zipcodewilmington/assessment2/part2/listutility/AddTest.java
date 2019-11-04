@@ -5,6 +5,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class AddTest {
+
     @Test
     public void test1() {
         test(1);
