@@ -1,7 +1,6 @@
 package com.zipcodewilmington.assessment2.part2;
-import java.util.ArrayList;
+import java.util.*;
 
-import java.util.List;
 
 
 public class ListUtility {
@@ -21,7 +20,6 @@ public class ListUtility {
 
     public String join() {
         StringBuilder builder = new StringBuilder();
-        // Append all Integers in StringBuilder to the StringBuilder.
         for (int number : list) {
             builder.append(number);
             builder.append(",");
