@@ -28,22 +28,53 @@ public class ArrayUtility {
     public Integer[] rotate(Integer[] array, Integer index) {
         Integer[] indexToRotate = new Integer[array.length];
         Integer counter = 0;
-        for (int i = 0; i < indexToRotate.length; i++) {
-            Integer integer = indexToRotate[i];
-
-        }
-        for (int i = 0; i < index; i++){
+        for (int i = index; i < indexToRotate.length; i++) {
             indexToRotate[counter] = array[i];
             counter++;
         }
-        return null;
+        for (int i = counter; i < indexToRotate.length; i++){
+            indexToRotate[i] = array[index - 1];
+            counter++;
+        }
+        return indexToRotate;
     }
 
     public Integer countOccurrence(Integer[] array1, Integer[] array2, Integer valueToEvaluate) {
-        return null;
+        int counter = 0;
+        for (Integer s : array1){
+            if (s == valueToEvaluate){
+                counter++;
+            }
+        }
+        for (Integer s : array2){
+            if (s == valueToEvaluate){
+                counter++;
+            }
+        }
+        return counter;
+
+
     }
 
     public Integer mostCommon(Integer[] array) {
-        return null;
+        Integer[] repeatingNums = {0,0,0,0,0,0,0,0,0,0,0};
+        int index = 0;
+        for (Integer i: array){
+            for (Integer j : array){
+                if (j==i){
+                    repeatingNums[index]++;
+                }
+            }
+            index++;
+        }
+        Integer mostCommon = 0;
+        for (int i = 0; i < repeatingNums.length - 1; i++){
+            if (repeatingNums[i] > repeatingNums[i+1]) {
+                mostCommon = array[i];
+            }
+        }
+
+        return mostCommon;
+
     }
 }

@@ -4,26 +4,26 @@ import java.util.List;
 
 public class ListUtility {
     public Boolean add(int i) {
-        return null;
+        return this.add(i);
     }
 
     public Integer size() {
-        return null;
+        return this.size();
     }
 
     public List<Integer> getUnique() {
-        return null;
+        return this.getUnique();
     }
 
     public String join() {
-        return null;
+        return this.join();
     }
 
     public Integer mostCommon() {
-        return null;
+        return this.mostCommon();
     }
 
     public Boolean contains(Integer valueToAdd) {
-        return null;
+        return this.contains(valueToAdd);
     }
 }
