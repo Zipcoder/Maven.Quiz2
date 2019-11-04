@@ -57,6 +57,7 @@ public class ArrayUtility {
     }
 
     public Integer mostCommon(Integer[] array) {
+
         Integer[] repeatingNums = {0,0,0,0,0,0,0,0,0,0,0};
         int index = 0;
         for (Integer i: array){
