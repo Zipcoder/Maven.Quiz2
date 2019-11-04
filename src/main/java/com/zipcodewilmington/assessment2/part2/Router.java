@@ -29,6 +29,7 @@ public class Router {
     }
 
     public void update(String path, String studentController) {
+        mapResult.replace(path,studentController);
     }
 
     public void remove(String path) {
