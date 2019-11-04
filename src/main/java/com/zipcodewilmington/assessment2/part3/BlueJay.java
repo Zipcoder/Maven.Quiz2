@@ -10,7 +10,7 @@ public class BlueJay extends Bird {
 
     @Override
     public int getSpeed() {
-        return 1;
+        return 13;
     }
 
     @Override

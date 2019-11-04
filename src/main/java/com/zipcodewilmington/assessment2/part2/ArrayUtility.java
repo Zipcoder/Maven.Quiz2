@@ -48,6 +48,7 @@ public class ArrayUtility {
 
         Integer mostCommonKey = 0;
         int maxValue = -1;
+
         for(Map.Entry<Integer, Integer> entry: map.entrySet()) {
 
             if(entry.getValue() > maxValue) {
