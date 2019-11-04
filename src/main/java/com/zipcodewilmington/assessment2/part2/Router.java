@@ -6,11 +6,11 @@ import java.util.TreeMap;
 public class Router {
 
     private String toString = "";
-
     Map<String, String> newMap = new TreeMap<String, String>();
 
     public void add(String path, String controller) {
         newMap.put(path,controller);
+        toString += path + controller + "\n";
     }
 
     public Integer size() {
@@ -30,10 +30,6 @@ public class Router {
     }
 
     public String toString(){
-        String result = "";
-        for(Map.Entry<String,String> entry : newMap.entrySet()){
-            result += entry.getKey() + entry.getValue() + "\n";
-        }
-        return result;
+        return toString;
     }
 }
