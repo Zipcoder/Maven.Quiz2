@@ -7,7 +7,7 @@ public class Router {
     HashMap<String, String> map = new HashMap<String,String>();
 
     public void add(String path, String controller) {
-        map.put(controller,path);
+        map.put(path,controller);
     }
 
     public Integer size() {
@@ -20,11 +20,11 @@ public class Router {
 
     public void update(String path, String studentController) {
         if(path.equals("/users")){
-            map.replace(path, studentController, "UserController");
+            map.replace(path, "UserController");
         } else if (path.equals("/employees")){
-            map.replace(path, studentController, "EmployeeController");
+            map.replace(path, "EmployeeController");
         } else if (path.equals("/students")) {
-            map.replace(path, studentController, "StudentController");
+            map.replace(path, "StudentController");
         }
     }
 
