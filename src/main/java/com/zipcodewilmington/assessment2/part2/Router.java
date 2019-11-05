@@ -25,4 +25,15 @@ public class Router {
     public void remove(String path) {
         map.remove(path);
     }
+
+    @Override
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+
+
+        for(String s : map.keySet()) {
+            stringBuilder.append(s).append(map.get(s)).append("\n");
+        }
+        return stringBuilder.toString();
+    }
 }
