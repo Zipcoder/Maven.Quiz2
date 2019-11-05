@@ -1,5 +1,7 @@
 package com.zipcodewilmington.assessment2.part1;
 
+import com.j256.ormlite.stmt.query.In;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -12,19 +14,18 @@ public class IntegerArrayUtilities {
     }
 
     public Integer[] range(int start, int stop) {
-       IntStream rangeArray = IntStream.range(start, stop+1);
+       Integer [] arrayX = new Integer[stop - (start-1)];
+       Integer counter = 0;
+       for(int i = start; i <=stop; i++)
+           arrayX[counter] = i;
+
+
+        IntStream rangeArray = IntStream.range(start, stop+1);
        int [] array = rangeArray.toArray();
 
         return Arrays.stream(array)
                 .boxed()
                 .toArray(Integer [] :: new);
-
-
-        //        List<Integer> rangeArray = new ArrayList<>();
-//        for(Integer range : rangeArray)
-//            for(int i = start; i < stop; i++)
-//                rangeArray.add(i,i);
-
         
     }
 

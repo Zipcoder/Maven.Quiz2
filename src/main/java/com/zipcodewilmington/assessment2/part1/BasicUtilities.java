@@ -17,8 +17,10 @@ public class BasicUtilities {
     }
 
     public Boolean startsWith(String string, Character character) {
-        string.substring(0,1).equals(character);
-        return string.charAt(0) == character;
+       Character firstCheck = Character.toLowerCase(string.charAt(0));
+       Character secondCheck = Character.toLowerCase(character);
+
+        return firstCheck.equals(secondCheck);
 //        string.charAt(0) == character
     }
 }

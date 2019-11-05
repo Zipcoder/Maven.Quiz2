@@ -1,16 +1,22 @@
 package com.zipcodewilmington.assessment2.part1;
 
 public class WuTangConcatenator {
-    public WuTangConcatenator(Integer input) {}
+    private Integer input;
+    public WuTangConcatenator(Integer input) {
+        this.input = input;
+    }
 
 
-        public Boolean isWu() {return false;
+        public Boolean isWu() {
+            return input % 3 == 0;
         }
 
-        public Boolean isTang() {return false;
+        public Boolean isTang() {
+            return input % 5 == 0;
         }
 
-        public Boolean isWuTang() {return false;
+        public Boolean isWuTang() {
+            return isWu() && isTang();
         }
 
     }

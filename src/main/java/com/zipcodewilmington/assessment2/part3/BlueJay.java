@@ -12,6 +12,7 @@ public class BlueJay extends Bird{
     }
 
     String migrationMonth = "";
+    @Override
     public String color (){
         return "blue";
     }
