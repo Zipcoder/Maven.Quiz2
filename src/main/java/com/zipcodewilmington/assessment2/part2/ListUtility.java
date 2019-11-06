@@ -13,7 +13,9 @@ public class ListUtility {
 
 
     public Boolean add(int i) {
-            if (al.add(i)) return true; else return false;
+          if (al.add(i)) return true; else return false;
+
+       // return al.add(i);
     }
 
     public Integer size() {
@@ -24,6 +26,7 @@ public class ListUtility {
     {
 
         List<Integer> uniquelist = new ArrayList<>();
+
         for (int i = 0; i < al.size(); i++) {
             if (!uniquelist.contains(al.get(i))) {
                 uniquelist.add(al.get(i));
@@ -59,13 +62,17 @@ public class ListUtility {
     {
 
         ArrayUtility aU = new ArrayUtility();
+
        Integer mostCommonelement =  aU.mostCommon(castingMethodtoInteger(al));
        return mostCommonelement;
     }
 
+
     public Boolean contains(Integer valueToAdd)
     {
-        Boolean check = false;
+        if (al.contains(valueToAdd)) return true; else return false;
+
+       /* Boolean check = false;
         if (al!= null)
         {
             for (Integer a:al)
@@ -77,6 +84,6 @@ public class ListUtility {
                 }
             }
         }
-        return check;
+        return check; */
     }
 }

@@ -40,8 +40,17 @@ public class Router {
 
     public String toString() {
         StringBuilder output = new StringBuilder();
-        for (Map.Entry<String,String> entry : routerMap.entrySet()) {
+
+        //routerMap.forEach(<String , String> entry -> entry.getKey() + entry.() ));
+        //routerMap.forEach();
+
+       /* for (Map.Entry<String,String> entry : routerMap.entrySet()) {
             output.append(entry.getKey()+entry.getValue()+"\n");
+        } */
+
+        for (String entry: routerMap.keySet())
+        {
+            output.append(entry + routerMap.get(entry) + "\n");
         }
         return output.toString();
     }

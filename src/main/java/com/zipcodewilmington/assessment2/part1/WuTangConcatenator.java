@@ -8,16 +8,19 @@ public class WuTangConcatenator {
     }
 
     public Boolean isWu() {
-        if (numberToEval%3 == 0) return true; else return false;
+      //  if (numberToEval%3 == 0) return true; else return false;
+        return numberToEval%3 == 0;
 
     }
 
     public Boolean isTang() {
-        if (numberToEval%5 == 0) return true; else return false;
+        return numberToEval%5 == 0;
     }
 
     public Boolean isWuTang()
     {
-        if (isTang() && isWu()) return true; else return false;
+       // if (isTang() && isWu()) return true; else return false;
+
+        return (isTang() && isWu());
     }
 }

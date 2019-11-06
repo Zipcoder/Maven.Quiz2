@@ -16,6 +16,7 @@ public class SpeedComparatorTest {
 
         Animal[] animals = {redRobin, horse, blueJay};
         Comparator comparator = (Comparator)new SpeedComparator();
+       // SpeedComparator comparator = (SpeedComparator) new SpeedComparator();
         Arrays.sort(animals, comparator);
 
         Assert.assertEquals(horse, animals[0]);
