@@ -1,11 +1,12 @@
 package com.zipcodewilmington.assessment2.part2;
 
+import sun.awt.image.ImageWatched;
+
 import java.util.HashMap;
-import java.util.Map;
-import java.util.TreeSet;
+import java.util.LinkedHashMap;
 
 public class Router {
-    HashMap<String, String> map = new HashMap<String,String>();
+    LinkedHashMap<String, String> map = new LinkedHashMap<String,String>();
 
     public void add(String path, String controller) {
         map.put(path,controller);
@@ -37,8 +38,8 @@ public class Router {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         for(String name : map.keySet()){
-            sb.append(map.get(name)).append(name).append("\n");
+            sb.append(name).append(map.get(name)).append("\n");
         }
-        return sb.toString().trim();
+        return sb.toString();
     }
 }
