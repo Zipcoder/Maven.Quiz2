@@ -1,10 +1,11 @@
 package com.zipcodewilmington.assessment2.part2;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 
 public class Router {
-    HashMap<String, String> list = new HashMap<String, String>();
+    HashMap<String, String> list = new LinkedHashMap<>();
 
     public void add(String path, String controller) {
         list.put(path, controller);
@@ -16,7 +17,8 @@ public class Router {
     }
 
     public String getController(String path) {
-        return null;
+
+        return list.get(path);
     }
 
     public void update(String path, String studentController) {
@@ -26,5 +28,15 @@ public class Router {
     public void remove(String path) {
 
         list.remove(path);
+    }
+
+    @Override
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+
+        for(String s : list.keySet()){
+            sb.append(s).append(list.get(s)).append("\n");
+        }
+        return sb.toString();
     }
 }

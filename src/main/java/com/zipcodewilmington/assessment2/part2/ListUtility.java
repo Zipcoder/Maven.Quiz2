@@ -1,11 +1,14 @@
 package com.zipcodewilmington.assessment2.part2;
+
+
 import java.util.*;
 
 
 
 public class ListUtility {
-    ArrayList<Integer> list = new ArrayList<Integer>();
-    public Boolean add(int i) {
+    private ArrayList<Integer> list = new ArrayList<Integer>();
+
+    public Boolean add(Integer i) {
         return list.add(i);
 
     }
@@ -19,18 +22,26 @@ public class ListUtility {
     }
 
     public String join() {
-        StringBuilder builder = new StringBuilder();
-        for (int number : list) {
-            builder.append(number);
-            builder.append(",");
+        StringBuilder sb = new StringBuilder(String.valueOf(list.get(0)));
+        for (int i = 1; i < list.size(); i++) {
+            sb.append(", ").append(list.get(i));
         }
-        // Remove last delimiter with setLength.
-        builder.setLength(builder.length() - 1);
-        return builder.toString();
+        return sb.toString();
     }
 
     public Integer mostCommon() {
-        return null;
+        Integer mostCommonInt = 0;
+        Integer counter = 0;
+
+        for (Integer i : list) {
+            Integer currentCount = Collections.frequency(list, i);
+            if(currentCount > counter) {
+                mostCommonInt = i;
+                counter = currentCount;
+            }
+        }
+
+        return mostCommonInt;
     }
 
     public Boolean contains(Integer valueToAdd) {

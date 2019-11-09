@@ -23,13 +23,6 @@ public class BasicUtilities {
     }
 
     public Boolean startsWith(String string, Character character) {
-        String c =Character.toString(character);
-        if(string.startsWith(c)){
-            return true;
-        }
-        else if (string.startsWith(c)){
-            return false;
-        }
-        return false;
+        return string.toLowerCase().charAt(0) == Character.toLowerCase(character);
     }
 }
