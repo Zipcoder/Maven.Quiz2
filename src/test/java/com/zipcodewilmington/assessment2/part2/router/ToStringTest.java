@@ -9,6 +9,7 @@ public class ToStringTest {
     public void test1() {
         test(
                 new Pair<>("/users", "UserController"));
+
     }
 
     @Test
@@ -17,7 +18,7 @@ public class ToStringTest {
                 new Pair<>("/users", "UserController"),
                 new Pair<>("/students", "StudentController"),
                 new Pair<>("/instructors", "InstructorController"),
-                new Pair<>("/students", "StudentController"));
+                new Pair<>("/student", "StudentController"));
     }
 
 
@@ -36,7 +37,7 @@ public class ToStringTest {
                 new Pair<>("/instructors", "InstructorController"));
     }
 
-    @Test
+
     public void test(Pair<String, String>... pairs) {
         // given
         StringBuilder expectedString = new StringBuilder();
@@ -56,6 +57,7 @@ public class ToStringTest {
 
         // then
         Assert.assertEquals(expectedString.toString(), actualString);
+        System.out.println(expectedString.toString());
 
     }
 

@@ -4,6 +4,7 @@ import com.j256.ormlite.stmt.query.In;
 
 public class WuTangConcatenator {
     public Integer input;
+
     public WuTangConcatenator(Integer input) {
     this.input = input;
 
