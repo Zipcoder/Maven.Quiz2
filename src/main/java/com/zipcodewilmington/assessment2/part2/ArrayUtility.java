@@ -20,24 +20,23 @@ public class ArrayUtility {
 
         return resultArr;
     }
-//not done
+
     public Integer[] rotate(Integer[] array, Integer index) {
 
+        int temp;
+        //loops until it gets to the specified index
+        for(int i = 0; i < index; i++){
+            //***
+            temp = array[0];
+            //loop through array
+            for(int j = 0; j < array.length-1; j++){
+                //j+1 = the next element
+                array[j] = array[j+1];
+            }
 
-        List<Integer> intList = new ArrayList<>(array.length);
-        for (int i : array)
-        {
-            intList.add(i);
+            array[array.length - 1] = temp;
         }
-
-        Collections.rotate(intList, index-1);
-
-        Integer[] newArr = new Integer[intList.size()];
-        for (int i=0; i < newArr.length; i++)
-        {
-            newArr[i] = intList.get(i).intValue();
-        }
-        return newArr;
+        return array;
     }
 
     public Integer countOccurrence(Integer[] array1, Integer[] array2, Integer valueToEvaluate) {

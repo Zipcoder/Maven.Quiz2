@@ -1,8 +1,11 @@
 package com.zipcodewilmington.assessment2.part1;
 
 public class WuTangConcatenator {
-    public WuTangConcatenator(Integer input) {
 
+    Integer input;
+
+    public WuTangConcatenator(Integer input) {
+        this.input = input;
     }
 //testing the length? wutang is 6 letters
     //return true or false
@@ -11,14 +14,14 @@ public class WuTangConcatenator {
     public Boolean isWu() {
 
 
-        return null;
+        return input % 3 == 0;
     }
 
     public Boolean isTang() {
-        return null;
+        return input % 5 == 0;
     }
 
     public Boolean isWuTang() {
-        return null;
+        return input % 3 == 0 && input % 5 == 0;
     }
 }
