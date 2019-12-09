@@ -21,8 +21,17 @@ for(int j=0 ;j<l2;j++){
     }
 
     public Integer[] rotate(Integer[] array, Integer index) {
-
+         int j=0;
         Integer[]rotated=new Integer[array.length];
+        for(int i =index; i < array.length; i++){
+            rotated[j]=array[i];
+            j++;
+        }
+         j=array.length-index;
+        for(int i = 0; i<index; i++){
+            rotated[j]=array[i];
+            j++;
+        }
 
 
 
@@ -31,26 +40,23 @@ for(int j=0 ;j<l2;j++){
 
 
 
-
-System.out.println(rotated);
+System.out.println(Arrays.toString(rotated));
         return rotated;
     }
 
     public Integer countOccurrence(Integer[] array1, Integer[] array2, Integer valueToEvaluate) {
-        int c=0;
+        Integer c=0;
         for(int i = 0;i <array1.length ;i++){
-            if(array1[i]==valueToEvaluate){
+          if(array1[i].equals(valueToEvaluate)){
+          //  if(array1[i] == valueToEvaluate){
                 c++;
             }
         }
         for(int j = 0 ; j < array2.length ; j++){
-            if(array2[j]== valueToEvaluate){
+            if(array2[j].equals(valueToEvaluate)){
                 c++;
             }
         }
-
-
-
         return c;
     }
 

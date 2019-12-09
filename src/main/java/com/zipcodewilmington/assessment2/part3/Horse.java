@@ -1,13 +1,19 @@
 package com.zipcodewilmington.assessment2.part3;
 
-public class Horse{
-    String color="brown";
-    public String move(){
+public class Horse implements Animal{
 
-    return "gallop";
+
+    public String move(){
+return "gallop";
+
     }
-    public Integer getSpeed(){
-        return 40;
+    public int getSpeed(){
+return 40;
+    }
+
+    @Override
+    public String color() {
+        return "brown";
     }
 
 }

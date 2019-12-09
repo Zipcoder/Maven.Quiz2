@@ -25,7 +25,7 @@ public class BasicUtilities {
 
     public Boolean startsWith(String string, Character character) {
 
-        if (string.charAt(0) == character) {
+        if (character == Character.toUpperCase(string.charAt(0))||character == Character.toLowerCase(string.charAt(0))) {
             return true;
         }
         return false;
