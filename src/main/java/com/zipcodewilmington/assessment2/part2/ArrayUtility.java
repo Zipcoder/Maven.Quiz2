@@ -1,5 +1,7 @@
 package com.zipcodewilmington.assessment2.part2;
 
+import java.util.HashMap;
+
 public class ArrayUtility {
     public Integer[] merge(Integer[] array1, Integer[] array2)
     {
@@ -52,7 +54,27 @@ public class ArrayUtility {
         return occurrences;
     }
 
-    public Integer mostCommon(Integer[] array) {
-        return null;
+    public Integer mostCommon(Integer[] array)
+    {
+        Integer currentMostCommon = array[0];
+        Integer currentMaxCount = 0;
+        for(Integer i = 0; i < array.length; i++)
+        {
+            Integer appearances = 0;
+            for(Integer k = 0; k < array.length; k++)
+            {
+                if(array[i] == array[k])
+                {
+                    appearances++;
+                }
+            }
+            if(appearances > currentMaxCount)
+            {
+                currentMaxCount = appearances;
+                currentMostCommon = array[i];
+            }
+        }
+
+        return currentMostCommon;
     }
 }
