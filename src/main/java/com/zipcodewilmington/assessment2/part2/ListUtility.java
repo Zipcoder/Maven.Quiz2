@@ -9,6 +9,9 @@ public class ListUtility {
     public Boolean add(int i) {
         int sizeBefore = myList.size();
         Integer newVal = i;
+        if(newVal == null){
+            myList.add(null);
+        }
             myList.add(newVal);
         int sizeAfter = myList.size();
         if(sizeBefore < sizeAfter){

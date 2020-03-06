@@ -22,9 +22,17 @@ public class ArrayUtility {
 
     public Integer[] rotate(Integer[] array, Integer index) {
         Integer[] newArr = new Integer[array.length];
+        int counter = 0;
+        for (int i = index; i < array.length; i++) {
+            newArr[counter] = array[i];
+            counter++;
+        }
 
-
-        return null;
+        for (int i = 0; i < index; i++) {
+            newArr[counter] = array[i];
+            counter++;
+        }
+        return newArr;
     }
 
     public Integer countOccurrence(Integer[] array1, Integer[] array2, Integer valueToEvaluate) {
