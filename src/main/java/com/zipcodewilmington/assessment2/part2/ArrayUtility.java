@@ -58,6 +58,25 @@ public class ArrayUtility {
     }
 
     public Integer mostCommon(Integer[] array) {
-        return null;
+        int count = 1;
+        int tempCount;
+        int popular = array[0];
+        int temp = 0;
+        for (int i = 0; i < (array.length - 1); i++)
+        {
+            temp = array[i];
+            tempCount = 0;
+            for (int j = 1; j < array.length; j++)
+            {
+                if (temp == array[j])
+                    tempCount++;
+            }
+            if (tempCount > count)
+            {
+                popular = temp;
+                count = tempCount;
+            }
+        }
+        return popular;
     }
 }
