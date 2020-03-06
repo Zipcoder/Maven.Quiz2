@@ -39,7 +39,6 @@ public class Router {
     public String toString()
     {
         StringBuilder output = new StringBuilder();
-        Router router = new Router();
         for (Map.Entry<String, String> pair : routing.entrySet()) {
             String path = pair.getKey();
             String controller = pair.getValue();
