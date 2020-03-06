@@ -11,7 +11,7 @@ public class ListUtility  {
        list = new ArrayList<>();
    }
 
-    public Boolean add(int i) {
+    public Boolean add(Integer i) {
         list.add(i);
         return list.contains(i);
     }
@@ -53,9 +53,7 @@ public class ListUtility  {
         Integer[] result = new Integer[list.size()];
         result = list.toArray(result);
         Integer mc = au.mostCommon(result);
-        if(mc==null){
-            throw new NullPointerException("is null");
-        }
+
        return mc;
 
     }

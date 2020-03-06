@@ -48,11 +48,14 @@ public class ArrayUtility {
                 return array[0];
             }
             Integer v = map.get(i);
-            if(!map.containsKey(i)){
+            if(!map.containsKey(i) && i!=null){
                 map.put(i,1);
             }
             else{
-                map.replace(i,v+1);
+                if(i!=null){
+                    map.replace(i,v+1);
+                }
+
                 if(v>highestValue){
                     highestValue = v;
                     highestKey = i;
