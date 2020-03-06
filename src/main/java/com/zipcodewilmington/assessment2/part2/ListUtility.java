@@ -39,9 +39,9 @@ public class ListUtility {
         return result;
     }
 
-    ArrayUtility au = new ArrayUtility();
-    public Integer mostCommon() {
 
+    public Integer mostCommon() {
+        ArrayUtility au = new ArrayUtility();
         return au.mostCommon(l.toArray(new Integer[0]));
     }
 
