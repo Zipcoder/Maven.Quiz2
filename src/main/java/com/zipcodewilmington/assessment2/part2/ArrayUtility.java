@@ -42,6 +42,24 @@ return null;//getNumberOfOcurrences(mergedArray, valueToEvaluate);
 
 
     public Integer mostCommon(Integer[] array) {
+        int count = 1, tempCount;
+        int popular = array[0];
+        int temp = 0;
+        for (int i = 0; i < (array.length - 1); i++)
+            temp = array[i];
+        {
+            tempCount = 0;
+            for (int j = 1; j < array.length; j++) {
+                if (temp == array[j])
+                    tempCount++;
+            }
+            if (tempCount > count) {
+                popular = temp;
+                count = tempCount;
+
+            }
+        }
+        return popular;
 
             //Integer[] occurrences = new Integer[array.length];
            // for (int i = 0; i < array.length; i++) {
@@ -56,7 +74,7 @@ return null;//getNumberOfOcurrences(mergedArray, valueToEvaluate);
                  //   maxIdx = i;
                // }
            // }
-            return null;
+        
         }}
 
 
