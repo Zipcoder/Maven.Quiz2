@@ -8,14 +8,13 @@ public class IntegerArrayUtilities {
     }
 
     public Integer[] range(int start, int stop) {
-        int arrayLength= stop-start+1;
-        Integer[] result= new Integer[arrayLength];
-        result[0]=start;
-        for(int i=0; i<arrayLength;i++){
-            start+=1;
-            result[i]=start;
-        }
-        return result;
+        int size =Math.abs(stop - start)+1;
+
+        Integer[] range= new Integer[size];
+        for(int i=0; i<range.length;i++)
+            range[i]=start+i;
+        return range;
+
 
     }
 
