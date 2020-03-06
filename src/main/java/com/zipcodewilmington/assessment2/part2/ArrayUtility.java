@@ -42,6 +42,33 @@ public class ArrayUtility {
     }
 
     public Integer mostCommon(Integer[] array) {
-        return null;
+
+        Arrays.sort(array);
+        int max_count = 1, res = array[0];
+        int curr_count = 1;
+
+        for (int i = 1; i < array.length; i++)
+        {
+            if (array[i] == array[i - 1])
+                curr_count++;
+            else
+            {
+                if (curr_count > max_count)
+                {
+                    max_count = curr_count;
+                    res = array[i - 1];
+                }
+                curr_count = 1;
+            }
+        }
+
+        
+        if (curr_count > max_count)
+        {
+            max_count = curr_count;
+            res = array[array.length - 1];
+        }
+
+        return res;
     }
 }
