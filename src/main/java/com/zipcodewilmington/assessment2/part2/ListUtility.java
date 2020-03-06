@@ -25,8 +25,7 @@ public class ListUtility {
         Set<Integer> s = new HashSet<>(l);
         int n = s.size();
         List<Integer> aList = new ArrayList<>(n);
-        for (Integer i : s)
-            aList.add(i);
+        aList.addAll(s);
         return aList;
     }
 
@@ -35,8 +34,7 @@ public class ListUtility {
         for(Integer i:l){
             s.append(i).append(", ");
         }
-        String result = s.toString().substring(0,s.toString().length()-2);
-        return result;
+        return s.toString().substring(0,s.toString().length()-2);
     }
 
 
