@@ -27,6 +27,7 @@ public class AddTest {
 
 
     private void test(Integer valueToAdd){
+
         // given
         ListUtility utility = new ListUtility();
         Assert.assertFalse(utility.contains(valueToAdd));
