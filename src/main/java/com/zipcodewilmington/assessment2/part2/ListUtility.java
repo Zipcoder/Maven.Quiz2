@@ -11,7 +11,7 @@ public class ListUtility
         iList = new ArrayList<>();
     }
 
-    public Boolean add(int i) {
+    public Boolean add(Integer i) {
         return iList.add(i);
     }
 
