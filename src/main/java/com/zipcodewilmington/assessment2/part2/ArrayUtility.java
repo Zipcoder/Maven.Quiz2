@@ -46,18 +46,23 @@ public class ArrayUtility {
 
     public Integer mostCommon(Integer[] array) {
         int count = 0;
+        int mostCommon = array[0];
+        int tempCount;
         int temp = 0;
-        int mostCommon = 0;
         for(int i = 0; i < array.length; i++){
+            temp = array[i];
+            tempCount = 0;
             for(int j = 1; j < array.length; j++){
                 if(array[0].equals(array[j])){
                     count++;
-
                 }
-
+                if(tempCount > count){
+                    mostCommon = temp;
+                    count = tempCount;
+                }
 
             }
         }
-        return null;
+        return mostCommon;
     }
 }
