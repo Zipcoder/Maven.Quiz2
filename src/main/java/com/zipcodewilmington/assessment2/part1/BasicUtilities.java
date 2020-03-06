@@ -2,7 +2,7 @@ package com.zipcodewilmington.assessment2.part1;
 
 public class BasicUtilities {
     public Boolean isGreaterThan5(Integer value) {
-        if (value > 5)
+        if (value >= 5)
             return true;
         else return false;
     }
@@ -15,7 +15,7 @@ public class BasicUtilities {
     }
 
     public Boolean isBetween5And7(Integer valueToEvaluate) {
-        if (valueToEvaluate > 5 && valueToEvaluate < 7)
+        if (valueToEvaluate >= 5 && valueToEvaluate <= 7)
             return true;
         else return false;
     }
