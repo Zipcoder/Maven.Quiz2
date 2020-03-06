@@ -1,4 +1,12 @@
 package com.zipcodewilmington.assessment2.part3;
 
-public class SpeedComparator {
+import java.util.Comparator;
+
+public class SpeedComparator implements Comparator<Animal>
+{
+
+    @Override
+    public int compare(Animal first, Animal second) {
+        return  second.getSpeed() - first.getSpeed();
+    }
 }
