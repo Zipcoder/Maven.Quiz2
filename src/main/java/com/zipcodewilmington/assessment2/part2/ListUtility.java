@@ -7,22 +7,29 @@ public class ListUtility {
 
     private List<Integer> list = new ArrayList<>();
 
-    public Boolean add(int i) {
+    public Boolean add(Integer i) {
 
-//        if(i = null){
-//            list.add(null);
-//        }
+        if(i == null){
+            list.add(null);
+        }
         list.add(i);
-        return this.contains(i);
+        return list.contains(i);
     }
 
     public Integer size() {
         return list.size();
     }
 
-    public List<Integer> getUnique() {
-        return null;
+    public List<Integer> getUnique(){
+
+        List<Integer> newList = new ArrayList<>();
+        for(Integer i : list){
+        if (!newList.contains(i)){
+            newList.add(i);
+        }
     }
+        return newList;
+}
 
     public String join() {
 
@@ -41,8 +48,6 @@ public class ListUtility {
 
         Integer[] array = new Integer[list.size()];
         array = list.toArray(array);
-       // if (list.contains(null)) return null;
-//        else
         return ArrayUtility.mostCommon(array);
     }
 
