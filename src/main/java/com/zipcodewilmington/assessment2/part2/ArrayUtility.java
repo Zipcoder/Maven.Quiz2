@@ -32,7 +32,13 @@ public class ArrayUtility {
     }
 
     public Integer countOccurrence(Integer[] array1, Integer[] array2, Integer valueToEvaluate) {
-        return null;
+        int n = 0;
+        for(Object to : array1){
+            if(to.equals(valueToEvaluate))
+                n += 1;
+        }
+
+        return  n;
     }
 
     public Integer mostCommon(Integer[] array) {
