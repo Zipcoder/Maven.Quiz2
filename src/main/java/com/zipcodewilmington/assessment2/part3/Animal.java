@@ -5,3 +5,4 @@ public interface Animal {
     int getSpeed();
     String color();
 }
+//List<Integer> answer = Arrays.asList(holder);
