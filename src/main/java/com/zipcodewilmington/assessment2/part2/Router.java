@@ -21,8 +21,10 @@ public class Router {
     }
 
     public void update(String path, String studentController) {
+        theMap.put(path,studentController);
     }
 
     public void remove(String path) {
+        theMap.remove(path);
     }
 }
