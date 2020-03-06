@@ -6,13 +6,10 @@ import java.util.List;
 public class ListUtility {
     List<Integer> myList = new ArrayList<>();
 
-    public Boolean add(int i) {
+    public Boolean add(Integer i) {
         int sizeBefore = myList.size();
         Integer newVal = i;
-        if(newVal == null){
-            myList.add(null);
-        }
-            myList.add(newVal);
+        myList.add(newVal);
         int sizeAfter = myList.size();
         if(sizeBefore < sizeAfter){
             return true;

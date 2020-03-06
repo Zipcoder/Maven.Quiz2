@@ -52,11 +52,11 @@ public class ArrayUtility {
     }
 
     public Integer mostCommon(Integer[] array) {
-       int result = -1;
+       Integer result = -1;
         HashMap<Integer, Integer> myMap = new HashMap<>();
 
         for (int i = 0; i < array.length; i++) {
-            int key = array[i];
+            Integer key = array[i];
             if(myMap.containsKey(key)){
                 int counter = myMap.get(key);
                 counter++;
@@ -65,6 +65,7 @@ public class ArrayUtility {
                 myMap.put(key,1);
             }
         }
+
 
         int maxCount = 0;
         for(Map.Entry<Integer,Integer> val : myMap.entrySet()){
