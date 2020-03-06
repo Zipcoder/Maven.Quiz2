@@ -39,7 +39,7 @@ public class ArrayUtility {
         return count;
     }
 
-    public Integer mostCommon(Integer[] array) {
+    public static Integer mostCommon(Integer[] array) {
 
         Integer count = 1;
         Integer mostCommon = array[0];
