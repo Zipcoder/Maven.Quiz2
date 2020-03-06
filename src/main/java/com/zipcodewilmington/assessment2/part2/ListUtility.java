@@ -32,7 +32,12 @@ public class ListUtility {
     }
 
     public String join() {
-        return null;
+        String toReturn = "";
+/*        for (int i = 0; i < list.size(); i++) {
+            toReturn += list.get(i);
+            if
+        }*/
+        return toReturn;
     }
 
     public Integer mostCommon() {
