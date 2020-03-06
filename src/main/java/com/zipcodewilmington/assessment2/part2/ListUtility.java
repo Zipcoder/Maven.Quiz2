@@ -7,8 +7,16 @@ import java.util.List;
 public class ListUtility {
     ArrayList<Integer> theList = new ArrayList<Integer>();
 
+    public ListUtility(){
+        this.theList = new ArrayList<Integer>();
+    }
     public Boolean add(int i) {
-        theList.add(i);
+        this.theList.ensureCapacity(theList.size()+1);
+        if (theList.size()>0) {
+            theList.add(theList.size() - 1, i);
+        } else {
+            theList.add(0,i);
+        }
         return theList.contains(i);
     }
 
