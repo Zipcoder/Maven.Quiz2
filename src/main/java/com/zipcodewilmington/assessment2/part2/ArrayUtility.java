@@ -30,7 +30,9 @@ public class ArrayUtility {
     public Integer countOccurrence(Integer[] array1, Integer[] array2, Integer valueToEvaluate) {
         int counter = 0;
         for (Integer integer : array1) {
-            if (valueToEvaluate.equals(integer))
+            if(valueToEvaluate==null){
+                counter++;
+            }else if (valueToEvaluate.equals(integer))
                 counter++;
         }
         if (array2 != null) {
@@ -49,7 +51,8 @@ public class ArrayUtility {
             hp.put(i,countOccurrence(array,null,i));
         }
         // find max frequency.
-        int max_count = 0, res = -1;
+        int max_count = 0;
+        Integer res = -1;
         for(Map.Entry<Integer, Integer> val : hp.entrySet()) {
             if (max_count < val.getValue()) {
                 res = val.getKey();

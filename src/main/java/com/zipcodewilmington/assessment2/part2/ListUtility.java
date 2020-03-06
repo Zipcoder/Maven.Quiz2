@@ -1,7 +1,9 @@
 package com.zipcodewilmington.assessment2.part2;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class ListUtility {
     private List<Integer> l;
@@ -20,7 +22,12 @@ public class ListUtility {
     }
 
     public List<Integer> getUnique() {
-        return null;
+        Set<Integer> s = new HashSet<>(l);
+        int n = s.size();
+        List<Integer> aList = new ArrayList<>(n);
+        for (Integer i : s)
+            aList.add(i);
+        return aList;
     }
 
     public String join() {
@@ -32,8 +39,10 @@ public class ListUtility {
         return result;
     }
 
+    ArrayUtility au = new ArrayUtility();
     public Integer mostCommon() {
-        return null;
+
+        return au.mostCommon(l.toArray(new Integer[0]));
     }
 
     public Boolean contains(Integer valueToAdd) {
