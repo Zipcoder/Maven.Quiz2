@@ -2,7 +2,7 @@ package com.zipcodewilmington.assessment2.part3;
 
 public class BlueJay extends Bird implements Comparable{
     public int getSpeed() {
-        return 0;
+        return 2;
     }
 
     public String color() {

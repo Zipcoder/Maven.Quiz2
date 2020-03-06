@@ -8,11 +8,17 @@ public class Horse implements Animal{
 
     @Override
     public int getSpeed() {
-        return 0;
+        return 3;
     }
 
     @Override
     public String color() {
         return "brown";
+    }
+
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }

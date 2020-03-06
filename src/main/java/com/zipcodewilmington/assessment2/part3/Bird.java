@@ -1,6 +1,6 @@
 package com.zipcodewilmington.assessment2.part3;
 
-public abstract class Bird  implements Animal{
+public abstract class Bird implements Animal{
     String migrationMonth = "";
 
     public String move() {
