@@ -2,13 +2,13 @@ package com.zipcodewilmington.assessment2.part1;
 
 public class BasicUtilities {
     public Boolean isGreaterThan5(Integer value) {
-        // int value;
-        // for (int i = 0; i < Math.abs(value); i++) {
-        // if (value > 5){
-        //    return null;
-        // }
-        //}
-        return null;
+
+         for (int i = 0; i < Math.abs(value); i++) {
+         if (value >= 5){
+            return true;
+        }
+        }
+        return false;
     }
 
     public Boolean isLessThan7(Integer value) {

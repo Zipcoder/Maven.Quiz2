@@ -65,7 +65,7 @@ public class MergeTest {
 
     private void test(Integer[] array1, Integer[] array2, Integer[] expected) {
         // when
-        Integer[] actual = utility.merge(array1, array2);
+        Integer [] actual = utility.merge(array1, array2);
 
         // then
         TestUtils.assertArrayEquals(expected, actual);
