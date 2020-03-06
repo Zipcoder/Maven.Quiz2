@@ -1,5 +1,9 @@
 package com.zipcodewilmington.assessment2.part2;
 
+import java.util.HashMap;
+import java.util.Map;
+
+
 public class ArrayUtility {
 
 
@@ -48,6 +52,26 @@ public class ArrayUtility {
 
 
     public Integer mostCommon(Integer[] array) {
-        return null;
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < array.length; i++) {
+            int key = array[i];
+            if (map.containsKey(key)) {
+                int freq = map.get(key);
+                freq++;
+                map.put(key,freq);
+            } else {
+                map.put(key,1);
+            }
+        }
+        int maxCount = 0;
+        int result = -1;
+        for(Map.Entry<Integer, Integer> val : map.entrySet()) {
+            if (maxCount < val.getValue()) {
+                result = val.getKey();
+                maxCount = val.getValue();
+            }
+        }
+        return result;
     }
 }
