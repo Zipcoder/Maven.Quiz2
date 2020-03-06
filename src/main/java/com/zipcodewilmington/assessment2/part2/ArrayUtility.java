@@ -1,7 +1,8 @@
 package com.zipcodewilmington.assessment2.part2;
 
 public class ArrayUtility {
-    public Integer[] merge(Integer[] array1, Integer[] array2) {
+    public Integer merge(Integer[] array1, Integer[] array2) {
+
         return null;
     }
 

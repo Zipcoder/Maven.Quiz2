@@ -39,7 +39,6 @@ public class MergeTest {
     }
 
 
-
     @Test
     public void test3() {
         //Given
