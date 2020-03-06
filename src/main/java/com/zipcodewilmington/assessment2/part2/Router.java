@@ -1,20 +1,31 @@
 package com.zipcodewilmington.assessment2.part2;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Router {
-    public void add(String path, String controller) {
-    }
+
+    public Map<String,String> mymap = new HashMap<>();
+
+    public void add(String path, String controller) { this.mymap.put(path,controller); }
 
     public Integer size() {
-        return null;
+        return this.mymap.size();
     }
 
     public String getController(String path) {
-        return null;
+        return this.mymap.get(path);
     }
 
-    public void update(String path, String studentController) {
-    }
+    public void update(String path, String studentController) { this.mymap.put(path,studentController);}
 
-    public void remove(String path) {
-    }
+    public void remove(String path) { this.mymap.remove(path); }
+
+//    @Override
+//    public String toString() {
+//        return "Router{" +
+//                "mymap=" + mymap +
+//                '}';
+//    }
 }
+
