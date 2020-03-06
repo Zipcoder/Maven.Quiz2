@@ -15,14 +15,46 @@ public class ArrayUtility {
     }
 
     public Integer[] rotate(Integer[] array, Integer index) {
+        Integer[] rotated = new Integer[array.length];
+
         return null;
     }
 
     public Integer countOccurrence(Integer[] array1, Integer[] array2, Integer valueToEvaluate) {
-        return null;
+        Integer occur = 0;
+        for (int i = 0; i < array1.length; i++) {
+            if (array1[i] == valueToEvaluate) {
+                occur++;
+            }
+        }
+        for (int j = 0; j < array2.length; j++){
+
+            if (array2[j] == valueToEvaluate){
+                occur++;
+            }
+        }
+        return occur;
     }
 
     public Integer mostCommon(Integer[] array) {
-        return null;
+        int count = 1, tempCount;
+        Integer popular = array[0];
+        Integer temp = 0;
+        for (int i = 0; i < (array.length - 1); i++)
+        {
+            temp = array[i];
+            tempCount = 0;
+            for (int j = 1; j < array.length; j++)
+            {
+                if (temp == array[j])
+                    tempCount++;
+            }
+            if (tempCount > count)
+            {
+                popular = temp;
+                count = tempCount;
+            }
+        }
+        return popular;
     }
 }
