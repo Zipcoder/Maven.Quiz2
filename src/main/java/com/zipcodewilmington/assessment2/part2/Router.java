@@ -2,6 +2,7 @@ package com.zipcodewilmington.assessment2.part2;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class Router {
 
@@ -29,8 +30,13 @@ public class Router {
 
     @Override
     public String toString() {
-        return "Router{" +
-                "router=" + router +
-                '}';
+        StringBuilder retString = new StringBuilder();
+        Set<Map.Entry<String, String>> setRouter = router.entrySet();
+        for(Map.Entry e : setRouter){
+
+            retString.append( "/" + e.getKey().toString().substring(1) + e.getValue() + "\n");
+        }
+
+        return retString.toString();
     }
 }

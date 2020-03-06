@@ -16,6 +16,7 @@ public class BasicUtilities {
     //OPTIMIZE
     public Boolean startsWith(String string, Character character) {
         String lowString = string.toLowerCase();
-        return lowString.charAt(0) == character;
+        String charToLower = character.toString().toLowerCase();
+        return lowString.charAt(0) == charToLower.charAt(0);
     }
 }
