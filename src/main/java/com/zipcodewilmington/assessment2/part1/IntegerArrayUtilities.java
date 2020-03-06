@@ -21,6 +21,7 @@ public class IntegerArrayUtilities {
     }
 
     public Integer getProductOfFirstTwo(Integer[] array) {
-        return null;
+
+        return array[array.length -1] * array[array.length - 2];
     }
 }
