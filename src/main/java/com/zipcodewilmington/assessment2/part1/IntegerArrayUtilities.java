@@ -13,12 +13,12 @@ public class IntegerArrayUtilities {
         for (int i = start; i < stop; i++) {
             counter++;
         }
-        Integer[] arr = new Integer[counter + 1];
 
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = start; j < stop; j++) {
-                arr[i] = j;
-            }
+        Integer[] arr = new Integer[counter + 1];
+        int counter2 = 0;
+        for (int k = start; k <= stop; k++) {
+            arr[counter2] = k;
+            counter2++;
         }
         return arr;
     }

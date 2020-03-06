@@ -14,10 +14,8 @@ public class BasicUtilities {
     }
 
     public Boolean startsWith(String string, Character character) {
-        if (Character.isUpperCase(string.charAt(0))) {
-            string.toLowerCase().charAt(0);
-        }
-
+        if (string.toLowerCase().charAt(0) == character) return true;
+        if (string.toUpperCase().charAt(0) == character) return true;
         return string.charAt(0) == character;
     }
 }
