@@ -6,9 +6,13 @@ import java.util.Map;
 
 public class Router {
     Map<String,String> myMap = new LinkedHashMap<>();
+    StringBuilder myBuilder = new StringBuilder();
 
     public void add(String path, String controller) {
         myMap.put(path, controller);
+        myBuilder.append(path);
+        myBuilder.append(controller);
+        myBuilder.append("\n");
     }
 
     public Integer size() {
@@ -29,12 +33,6 @@ public class Router {
 
     @Override
     public String toString() {
-        StringBuilder myBuilder = new StringBuilder();
-        for (Map.Entry<String,String> n: myMap.entrySet()) {
-            myBuilder.append(n.getKey());
-            myBuilder.append(n.getValue());
-            myBuilder.append("\n");
-        }
         return myBuilder.toString();
     }
 }
