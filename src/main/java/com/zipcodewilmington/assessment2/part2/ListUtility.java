@@ -1,10 +1,13 @@
 package com.zipcodewilmington.assessment2.part2;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ListUtility {
+
     public Boolean add(int i) {
-        return null;
+
+        return true;
     }
 
     public Integer size() {
