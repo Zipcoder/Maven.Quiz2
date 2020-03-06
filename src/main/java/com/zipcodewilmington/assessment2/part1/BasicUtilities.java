@@ -34,6 +34,6 @@ public class BasicUtilities {
     }
 
     public Boolean startsWith(String string, Character character) {
-        return null;
+        return string.charAt(0) == character || string.toLowerCase().charAt(0) == character;
     }
 }
