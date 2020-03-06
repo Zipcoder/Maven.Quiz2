@@ -2,18 +2,28 @@ package com.zipcodewilmington.assessment2.part1;
 
 public class IntegerArrayUtilities {
     public Boolean hasEvenLength(Integer[] array) {
-        return null;
+        if (array.length % 2 == 0)
+            return true;
+        else
+            return false;
     }
 
     public Integer[] range(int start, int stop) {
+//        Integer[] result = new Integer[stop-start];
+//        for (int i = start; i <= stop; i++) {
+//            result[] = i;
+//        }
+//        return result;
         return null;
     }
 
     public Integer getSumOfFirstTwo(Integer[] array) {
-        return null;
+        Integer sum = array[0] + array[1];
+        return sum;
     }
 
     public Integer getProductOfFirstTwo(Integer[] array) {
-        return null;
+        Integer product = array[array.length-1] * array[array.length-2];
+        return product;
     }
 }
