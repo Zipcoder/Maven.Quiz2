@@ -24,9 +24,8 @@ public class BasicUtilities {
     }
 
     public Boolean startsWith(String string, Character character) {
-        character.toString().toLowerCase();
         char[] newArray = string.toLowerCase().toCharArray();
-        if (newArray[0] == character) {
+        if (newArray[0] == Character.toLowerCase(character)) {
             return true;
         } else
             return false;
