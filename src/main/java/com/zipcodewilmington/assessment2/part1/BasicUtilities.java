@@ -23,6 +23,6 @@ public class BasicUtilities {
             if(string.startsWith(String.valueOf(character))) {
                 return true;
             }return false;
-    } 
+    }
 
 }

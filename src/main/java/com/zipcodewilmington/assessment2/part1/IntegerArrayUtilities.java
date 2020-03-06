@@ -20,10 +20,21 @@ public class IntegerArrayUtilities {
     }
 
     public Integer getSumOfFirstTwo(Integer[] array) {
-        return null;
+        Integer[] slice = Arrays.copyOfRange(array, array[0], array[1]);
+        int sumOfFirstTwo = 0;
+        for(int i = 0; i < slice.length; i++ ){
+            sumOfFirstTwo+= i;
+        }
+
+        return sumOfFirstTwo;
     }
 
     public Integer getProductOfFirstTwo(Integer[] array) {
-        return null;
+        Integer[] slice = Arrays.copyOfRange(array, array[0], array[1]);
+        int prodOfFirstTwo = 0;
+        for(int i = 0; i < slice.length; i++){
+            prodOfFirstTwo *= i;
+        }
+        return prodOfFirstTwo;
     }
 }
