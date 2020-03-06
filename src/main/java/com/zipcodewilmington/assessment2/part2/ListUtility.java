@@ -20,7 +20,8 @@ public class ListUtility {
     }
 
     public Integer mostCommon() {
-        return null;
+
+      return null;
     }
 
     public Boolean contains(Integer valueToAdd) {
