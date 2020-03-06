@@ -37,21 +37,36 @@ public class ListUtility {
         return retString.toString();
     }
 
-    //NULL ERROR
-    public Integer mostCommon() {
-        int maxCount = 0;
-        Integer retInt = 0;
+//    //NULL ERROR
+//    public Integer mostCommon() {
+//        int maxCount = 0;
+//        Integer retInt = 0;
+//        for (int i = 0; i < list.size(); i++) {
+//            int count = 1;
+//            for (int j = 1; j < list.size(); j++) {
+//                if(list.get(i) == null){
+//                    count++;
+//                    break;
+//                }
+//                if(list.get(i).equals(list.get(j)))
+//                    count++;
+//            }
+//            if(count > maxCount){
+//                retInt = list.get(i);
+//                maxCount = count;
+//            }
+//        }
+//        return retInt;
+//    }
+
+    public Integer mostCommon(){
+        ArrayUtility au = new ArrayUtility();
+        Integer[] retArray = new Integer[list.size()];
         for (int i = 0; i < list.size(); i++) {
-            int count = 1;
-            for (int j = 1; j < list.size(); j++) {
-                if(list.get(i).equals(list.get(j)))
-                    count++;
-            }
-            if(count > maxCount){
-                retInt = list.get(i);
-                maxCount = count;
-            }
+            retArray[i] = list.get(i);
         }
+
+        Integer retInt = au.mostCommon(retArray);
         return retInt;
     }
 
