@@ -20,7 +20,9 @@ public class BasicUtilities {
     }
 
     public Boolean startsWith(String string, Character character) {
+            if(string.startsWith(String.valueOf(character))) {
+                return true;
+            }return false;
+    } 
 
-        return true;
-    }
 }

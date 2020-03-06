@@ -4,7 +4,7 @@ public class WuTangConcatenator {
     public Integer Wu;
     public Integer Tang;
     public Integer WuTang;
-    
+
     public WuTangConcatenator(Integer input) {
     }
 
