@@ -25,6 +25,7 @@ public class RotateTest {
 
         //Then
         Assert.assertArrayEquals(expected, actual);
+        System.out.println(actual);
     }
 
     @Test
