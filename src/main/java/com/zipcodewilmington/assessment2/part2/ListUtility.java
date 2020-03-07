@@ -18,8 +18,16 @@ public class ListUtility {
     }
 
     public List<Integer> getUnique() {
-
-        return null;
+//        list.toArray();
+//        for (int i = 0; i < list.size(); i++){
+//            for (int j = 0; j < list.size() - 1; j++){
+//                if (list.toArray()[i] != list.toArray()[j]){
+//                    list.add(i);
+//                    break;
+//                }
+//            }
+//        }
+        return list;
     }
 
     public String join() {
