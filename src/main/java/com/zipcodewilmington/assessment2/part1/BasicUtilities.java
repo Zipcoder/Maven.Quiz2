@@ -1,5 +1,7 @@
 package com.zipcodewilmington.assessment2.part1;
 
+import java.io.CharConversionException;
+
 public class BasicUtilities {
     public Boolean isGreaterThan5(Integer value) {
 
@@ -15,6 +17,6 @@ public class BasicUtilities {
     }
 
     public Boolean startsWith(String string, Character character) {
-        return null;
+        return Character.toLowerCase(string.charAt(0)) == character || Character.toUpperCase(string.charAt(0)) == character;
     }
 }
