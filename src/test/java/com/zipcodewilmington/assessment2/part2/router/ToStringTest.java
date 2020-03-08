@@ -35,10 +35,10 @@ public class ToStringTest {
                 new Pair<>("/users", "UserController"),
                 new Pair<>("/instructors", "InstructorController"));
     }
-    
 
-    @Test
-    public void test(Pair<String, String>... pairs) {
+
+
+    private void test(Pair<String, String>... pairs) {
         // given
         StringBuilder expectedString = new StringBuilder();
         Router router = new Router();
