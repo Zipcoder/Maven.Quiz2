@@ -18,7 +18,7 @@ public class ListUtility {
 
     public Integer size() { return list.size(); }
 
-
+// TODO: getUnique
     public List<Integer> getUnique() {
         List<Integer> list2 = new ArrayList<>();
         for (Integer inter : list2) {
