@@ -1,5 +1,7 @@
 package com.zipcodewilmington.assessment2.part2;
 
+import com.j256.ormlite.stmt.query.In;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,28 +20,35 @@ public class ListUtility {
     }
 
     public List<Integer> getUnique() {
-//        list.toArray();
-//        for (int i = 0; i < list.size(); i++){
-//            for (int j = 0; j < list.size() - 1; j++){
-//                if (list.toArray()[i] != list.toArray()[j]){
-//                    list.add(i);
-//                    break;
-//                }
-//            }
-//        }
+        List<Integer> unique = new ArrayList<>();
+        for (Integer i: list){
+            if (!unique.contains(i)){
+                unique.add(i);
+            }
+        }
+
         return list;
     }
 
     public String join() {
-
-        return null;
+        String blah = "";
+        for (Integer i: list){
+            if (list.size()==1){
+                return i.toString();
+            }
+            blah += i + ", ";
+        }
+        return blah.substring(0, blah.length() - 2);
     }
 
     public Integer mostCommon() {
-        return null;
+        ArrayUtility util = new ArrayUtility();
+        Integer[] result = new Integer[list.size()];
+        result = list.toArray(result);
+        return util.mostCommon(result);
     }
 
     public Boolean contains(Integer valueToAdd) {
-        return null;
+        return list.contains(valueToAdd);
     }
 }
