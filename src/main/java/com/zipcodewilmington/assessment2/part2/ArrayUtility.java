@@ -1,9 +1,9 @@
 package com.zipcodewilmington.assessment2.part2;
 
-import com.sun.tools.hat.internal.model.JavaObjectArray;
-import com.sun.tools.javac.code.Attribute;
-import com.sun.tools.javac.util.ArrayUtils;
-import com.sun.tools.javac.util.List;
+//import com.sun.tools.hat.internal.model.JavaObjectArray;
+//import com.sun.tools.javac.code.Attribute;
+//import com.sun.tools.javac.util.ArrayUtils;
+//import com.sun.tools.javac.util.List;
 
 public class ArrayUtility {
     public Integer[] merge(Integer[] array1, Integer[] array2) {
@@ -16,8 +16,18 @@ public class ArrayUtility {
 
     public Integer[] rotate(Integer[] array, Integer index) {
         Integer[] rotated = new Integer[array.length];
+        int count = 0;
+        for (int i = index; i < array.length; i++){
+            rotated[count] = array[i];
+            count++;
+        }
 
-        return null;
+        for (int i = 0; i < index; i++){
+            rotated[count] = array[i];
+            count++;
+        }
+
+        return rotated;
     }
 
     public Integer countOccurrence(Integer[] array1, Integer[] array2, Integer valueToEvaluate) {
