@@ -3,10 +3,15 @@ package com.zipcodewilmington.assessment2.part2;
 import com.j256.ormlite.stmt.query.In;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class ListUtility {
-    List<Integer> list = new ArrayList<>(); {
+    private List<Integer> list;
+
+    public ListUtility(){
+        list = new ArrayList<>();
     }
     public Boolean add(int i) {
         if (list.add(i)){
@@ -20,14 +25,19 @@ public class ListUtility {
     }
 
     public List<Integer> getUnique() {
-        List<Integer> unique = new ArrayList<>();
-        for (Integer i: list){
-            if (!unique.contains(i)){
-                unique.add(i);
-            }
-        }
-
-        return list;
+//        List<Integer> unique = new ArrayList<>();
+////        for (Integer i: list){
+////            if (!unique.contains(i)){
+////                unique.add(i);
+////            }
+////        }
+////
+////        return list;
+        Set<Integer> s = new HashSet<>(list);
+        int n = s.size();
+        List<Integer> aList = new ArrayList<>(n);
+        aList.addAll(s);
+        return aList;
     }
 
     public String join() {
