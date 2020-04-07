@@ -13,10 +13,8 @@ public class BasicUtilities {
         return valueToEvaluate >= 5 && valueToEvaluate <= 7;
     }
 
-    //OPTIMIZE
     public Boolean startsWith(String string, Character character) {
-        String lowString = string.toLowerCase();
-        String charToLower = character.toString().toLowerCase();
-        return lowString.charAt(0) == charToLower.charAt(0);
+        String strChar = string.charAt(0) + "";
+        return strChar.equalsIgnoreCase(character + "");
     }
 }

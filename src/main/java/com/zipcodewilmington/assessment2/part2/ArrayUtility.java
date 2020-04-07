@@ -1,53 +1,26 @@
 package com.zipcodewilmington.assessment2.part2;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.lang.reflect.Array;
+import java.util.*;
 
 public class ArrayUtility {
     public Integer[] merge(Integer[] array1, Integer[] array2) {
-        Integer[] mergedArray = new Integer[array1.length + array2.length];
-        for (int i = 0; i < array1.length; i++) {
-            mergedArray[i] = array1[i];
-        }
-        for (int i = 0; i < array2.length; i++) {
-            mergedArray[array1.length+i] = array2[i];
-        }
-        return mergedArray;
+        List<Integer> retList = new ArrayList<>(Arrays.asList(array1));
+        retList.addAll(Arrays.asList(array2));
+        return retList.toArray(new Integer[0]);
     }
 
     public Integer[] rotate(Integer[] array, Integer index) {
-        Integer[] firstPart = split(array, 0, index);
-        Integer[] secondPart = split(array, index, array.length);
-        Integer[] retArray = merge(secondPart, firstPart);
-        return retArray;
+        return merge(split(array, index, array.length), split(array, 0, index));
     }
 
     public Integer countOccurrence(Integer[] array1, Integer[] array2, Integer valueToEvaluate) {
         Integer count = 0;
         Integer[] mergedArray = merge(array1, array2);
-        for (int i = 0; i < mergedArray.length; i++) {
-            if(mergedArray[i].equals(valueToEvaluate))
-                count++;
-        }
-        return count;
+        return (int)Arrays.stream(mergedArray)
+                .filter(x -> x.equals(valueToEvaluate))
+                .count();
     }
-
-//    public Integer mostCommon(Integer[] array) {
-//        int maxCount = 0;
-//        Integer retInt = 0;
-//        for (int i = 0; i < array.length; i++) {
-//            int count = 1;
-//            for (int j = 1; j < array.length; j++) {
-//                if(array[i].equals(array[j]))
-//                    count++;
-//            }
-//            if(count > maxCount){
-//                retInt = array[i];
-//                maxCount = count;
-//            }
-//        }
-//        return retInt;
-//    }
 
     public Integer mostCommon(Integer[] array){
         Map<Integer, Integer> most = new HashMap<>();

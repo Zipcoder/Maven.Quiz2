@@ -1,7 +1,10 @@
 package com.zipcodewilmington.assessment2.part2;
 
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 public class ListUtility {
 
@@ -17,13 +20,11 @@ public class ListUtility {
     }
 
     public List<Integer> getUnique() {
-        List<Integer> retList = new ArrayList<>();
-        retList.add(list.get(0));
+        Set<Integer> retSet = new LinkedHashSet<>();
         for(Integer e : list){
-            if(!retList.contains(e))
-                retList.add(e);
+            retSet.add(e);
         }
-        return retList;
+        return new ArrayList<>(retSet);
     }
 
     public String join() {
@@ -37,37 +38,9 @@ public class ListUtility {
         return retString.toString();
     }
 
-//    //NULL ERROR
-//    public Integer mostCommon() {
-//        int maxCount = 0;
-//        Integer retInt = 0;
-//        for (int i = 0; i < list.size(); i++) {
-//            int count = 1;
-//            for (int j = 1; j < list.size(); j++) {
-//                if(list.get(i) == null){
-//                    count++;
-//                    break;
-//                }
-//                if(list.get(i).equals(list.get(j)))
-//                    count++;
-//            }
-//            if(count > maxCount){
-//                retInt = list.get(i);
-//                maxCount = count;
-//            }
-//        }
-//        return retInt;
-//    }
-
     public Integer mostCommon(){
         ArrayUtility au = new ArrayUtility();
-        Integer[] retArray = new Integer[list.size()];
-        for (int i = 0; i < list.size(); i++) {
-            retArray[i] = list.get(i);
-        }
-
-        Integer retInt = au.mostCommon(retArray);
-        return retInt;
+        return au.mostCommon(list.toArray(new Integer[0]));
     }
 
     public Boolean contains(Integer valueToAdd) {
