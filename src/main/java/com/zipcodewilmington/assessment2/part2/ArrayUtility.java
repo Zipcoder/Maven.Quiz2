@@ -15,25 +15,21 @@ public class ArrayUtility {
     }
 
     public Integer[] rotate(Integer[] array, Integer index) {
-        for (int i = 0; i < index; i++) {
-            int temp = array[0];
-            for (int j = 0; j < array.length; j++) {
-                array[j] = array[j + 1];
-                array[j] = temp;
-            }
-//        ArrayList testArray = new ArrayList()
-//        for (Integer t : array) {
-//            testArray.add(t);
-//            Collections.rotate(testArray, index);
-//            Integer[] rotatedArray = new Integer[testArray.size()];
-//            rotatedArray = testArray.toArray(rotatedArray);
-        }return array;
+        Integer[] rotatedArray = new Integer[array.length];
+        int newIndex = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            newIndex = i >= index ? i - index : array.length - (index - i);
+
+            rotatedArray[newIndex] = array[i];
+        }
+        return rotatedArray;
     }
 
     public Integer countOccurrence(Integer[] array1, Integer[] array2, Integer valueToEvaluate) {
-           int intCount = 0;
-           Integer[] result = new Integer[array1.length + array2.length];
-           result = merge(array1, array2);
+        int intCount = 0;
+        Integer[] result = new Integer[array1.length + array2.length];
+        result = merge(array1, array2);
         for (int i = 0; i < result.length; i++) {
             if (result[i].equals(valueToEvaluate)) {
                 intCount++;
@@ -55,7 +51,7 @@ public class ArrayUtility {
                 if (temp == array[j]) {
                     tempCount++;
                 }
-                if ((tempCount > count)){
+                if ((tempCount > count)) {
                     mostPop = temp;
                     count = tempCount;
                 }
@@ -64,3 +60,4 @@ public class ArrayUtility {
         return (Integer) mostPop;
     }
 }
+
