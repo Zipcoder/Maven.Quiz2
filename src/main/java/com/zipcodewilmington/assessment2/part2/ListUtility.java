@@ -3,12 +3,16 @@ package com.zipcodewilmington.assessment2.part2;
 import java.util.List;
 
 public class ListUtility {
+    ListUtility utility;
     public Boolean add(int i) {
-        return null;
+        utility.add(i);
+        utility.contains(i);
+        return true;
     }
 
     public Integer size() {
-        return null;
+        Integer result = utility.size();
+        return result;
     }
 
     public List<Integer> getUnique() {
@@ -24,6 +28,8 @@ public class ListUtility {
     }
 
     public Boolean contains(Integer valueToAdd) {
-        return null;
+        utility.add(valueToAdd);
+        utility.contains(valueToAdd);
+        return true;
     }
 }
