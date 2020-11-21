@@ -36,7 +36,7 @@ public class ToStringTest {
                 new Pair<>("/instructors", "InstructorController"));
     }
 
-    @Test
+    //REMOVED @TEST ANNOTATION NOT SURE
     public void test(Pair<String, String>... pairs) {
         // given
         StringBuilder expectedString = new StringBuilder();
