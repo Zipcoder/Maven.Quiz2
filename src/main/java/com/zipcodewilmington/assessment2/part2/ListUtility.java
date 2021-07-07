@@ -11,6 +11,7 @@ public class ListUtility {
         return null;
     }
 
+
     public List<Integer> getUnique() {
         return null;
     }
@@ -20,7 +21,8 @@ public class ListUtility {
     }
 
     public Integer mostCommon() {
-        return null;
+
+      return null;
     }
 
     public Boolean contains(Integer valueToAdd) {

@@ -5,7 +5,7 @@ public class Router {
     }
 
     public Integer size() {
-        return null;
+        return size();
     }
 
     public String getController(String path) {
